@@ -1,18 +1,19 @@
-/*
- ©2017 Dhanuja Ranawake. All rights reserved.
- */
+/* ©2017 Dhanuja Ranawake. All rights reserved.*/
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
+    int sum=0, n, i;
+    printf("Enter a number to reverse ");
+    scanf(" %d", &n);
+    do {
+        i = n % 10;
+        sum = (sum*10) + i;
+        n = n/10;
 
-    int day = 1;
-    float amount = .01;
-
-    while(day <= 31) {
-        printf("Day %d \t Amount : $%.2f\n", day, amount);
-        amount *= 2;
-        day++;
-    }
+    }while (n >0);
+    printf("%d", sum);
     return 0;
 }
+
